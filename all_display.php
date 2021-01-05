@@ -117,6 +117,17 @@ foreach($disp_data as $value){ // データ表示
     print '    <br>';  
 
     }
+
+    // ネタ元がある場合
+    if ($value['pun_original'] != '') {
+      print '    <h6 class="card-subtitle">ネタ元</h6>';
+      print '    <p class="card-text">'.$value['pun_original'].'</p>';
+    }
+
+    // ニックネーム
+    print '    <h6 class="card-subtitle">投稿者</h6>';
+    print '    <p class="card-text">'.$value['nickname'].'さん</p>';
+
     // 削除と通報ボタン ************************************
     print '<div style="display:inline-flex">';
     // 削除用にデータを渡す
