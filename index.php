@@ -35,7 +35,7 @@
     $dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // LIMITで指定した数のダジャレをランダムで取得する
-    $sql = 'SELECT code, pun_inquiry, image_data, pun_original, nickname, image_path FROM table_pun_post WHERE delete_flag != 1 ORDER BY RAND() LIMIT 5';
+    $sql = 'SELECT code, pun_inquiry, pun_original, nickname, image_path FROM table_pun_post WHERE delete_flag != 1 ORDER BY RAND() LIMIT 5';
     $stmt = $dbh -> prepare($sql);
     $stmt -> execute();
     // 取得したダジャレを配列として入れる
